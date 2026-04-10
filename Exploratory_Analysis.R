@@ -1,3 +1,5 @@
+# Title: Exploratory Data Analysis (EDA)
+# Objective: Visualize trends and perform statistical tests
 # Step 2: Exploratory Data Analysis (EDA)
 library(ggplot2)
 
