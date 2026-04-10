@@ -1,6 +1,6 @@
 # 📊 Bank Marketing Campaign Analysis
 
-A professional data analytics project using **R** to analyze and predict customer behavior for a retail bank's marketing campaign.
+Aprofessional data analytics project using **R** to analyze and predict customer behavior for a retail bank's marketing campaign.
 
 ## 🎯 Project Objectives
 - Analyze customer demographics (Job, Marital Status, Balance).
