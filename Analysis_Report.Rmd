@@ -1,0 +1,50 @@
+---
+title: "Bank Marketing Campaign Analysis"
+author: "Gulnar Hasanova"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Executive Summary
+>This report analyzes the efficiency of a Portuguese bank's direct marketing campaign. Using statistical tests and logistic regression, we identify the key factors that drive customers to subscribe to a term deposit.
+
+```{r setup, include=TRUE,echo=TRUE,warning=FALSE,message=FALSE,error=FALSE}
+library(ggplot2)
+library(dplyr)
+df <- read.csv("bank-full.csv", sep = ";", stringsAsFactors = TRUE)
+```
+
+
+## 1. Distribution of Target Variable
+> We first analyze how many customers subscribed to the term deposit.
+
+```{r 1, include=TRUE,echo=TRUE,warning=FALSE,message=FALSE,error=FALSE}
+prop.table(table(df$y))
+ggplot(df, aes(x=y, fill=y)) + geom_bar() + theme_minimal()
+```
+
+> Insight: The dataset is imbalanced, with only ~11.7% success rate.
+
+## 2. Statistical Analysis (Chi-Square Test)
+> Does the customer's job affect the subscription rate?
+
+```{r 2, include=TRUE,echo=TRUE,warning=FALSE,message=FALSE,error=FALSE}
+chisq.test(table(df$job, df$y))
+```
+
+> Insight: Since p-value < 0.05, the job category is a significant predictor of success.
+
+
+## 3. Logistic Regression Results
+> We built a model to predict the probability of subscription.
+
+```{r 3, include=TRUE,echo=TRUE,warning=FALSE,message=FALSE,error=FALSE}
+model <- glm(y ~ age + job + marital + balance + duration, data = df, family = binomial)
+summary(model)
+```
+
+> Key Findings: Students and retirees have the highest probability of subscribing. Increased call duration also significantly boosts success odds.
+
+
+
+
