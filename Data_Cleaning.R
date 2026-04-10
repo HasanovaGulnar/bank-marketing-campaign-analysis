@@ -1,4 +1,6 @@
 # Project: Bank Marketing Campaign Analysis
+# Title: Data Preprocessing
+# Objective: Load raw data and handle formatting issues
 # Step 1: Data Loading and Cleaning
 
 # Load necessary library
