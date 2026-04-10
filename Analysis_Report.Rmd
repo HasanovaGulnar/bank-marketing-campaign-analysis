@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ## Executive Summary
->This report analyzes the efficiency of a Portuguese bank's direct marketing campaign. Using statistical tests and logistic regression, we identify the key factors that drive customers to subscribe to a term deposit.
+> This report analyzes the efficiency of a Portuguese bank's direct marketing campaign. Using statistical tests and logistic regression, we identify the key factors that drive customers to subscribe to a term deposit.
 
 ```{r setup, include=TRUE,echo=TRUE,warning=FALSE,message=FALSE,error=FALSE}
 library(ggplot2)
