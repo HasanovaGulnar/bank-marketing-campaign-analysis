@@ -1,3 +1,5 @@
+# Title: Predictive Modeling
+# Objective: Use Logistic Regression to predict term deposit subscriptions
 # Step 3: Predictive Analytics (Logistic Regression)
 
 # Load cleaned data
